@@ -3,7 +3,7 @@
 }
 
 .btn-group .btn {
-    display: block; /* Make the buttons appear below each other */
+    display: block; 
     width: 40%;
     margin:10px;
 }
