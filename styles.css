@@ -1,0 +1,9 @@
+#BtnPrevious{
+    float: left;
+    width: 100px;
+}
+
+#BtnNext{
+    float: right;
+    width:100px
+}
