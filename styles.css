@@ -1,9 +1,10 @@
-input,label{
-    margin-top: 5px;
-    margin-right: 20px;
-    margin-bottom: 5px;
+.btn-group {
+    width: 100%;
 }
 
+.btn-group .btn {
+    width: 40%;
+}
 
 
 #BtnPrevious{
