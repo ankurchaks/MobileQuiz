@@ -64,17 +64,31 @@ async function GetData(Quescnt){
 document.getElementById('BtnNext').addEventListener('click',callNextQuestion);
 
 function callNextQuestion(){
-    //alert('Next Question');
-    ResetScreen();
-    const cnt=parseInt(document.getElementById('QuesNo').textContent)+1;
-    GetData(cnt);
-    document.getElementById('QuesNo').textContent=cnt;
+    var myName=document.getElementById("inputDefault").value
+    if (myName.trim()=="") {
+        //alert('Please enter youe name to proceed.')
+        var pos = myName.indexOf(" ");
+        if (pos<11) {
+            document.getElementById("inputDefault").value=myName.slice(1,pos);
+        } else {
+            document.getElementById("inputDefault").value=myName.slice(1,10);
+        }
+        document.getElementById('Announcement').style.display='Block';
+        document.getElementById('Announcement').style.color='#C62828';
+        document.getElementById('Announcement').textContent='Please enter your name to proceed.';
+    }else{
+        ResetScreen();
+        const cnt=parseInt(document.getElementById('QuesNo').textContent)+1;
+        GetData(cnt);
+        document.getElementById('QuesNo').textContent=cnt;
+    }
+    
 }
 
 document.getElementById('BtnPrevious').addEventListener('click',callPreviousQuestion);
 
 function callPreviousQuestion(){
-    //alert('Previous Question');
+    
     ResetScreen();
     const cnt=parseInt(document.getElementById('QuesNo').textContent)-1;
     GetData(cnt);
