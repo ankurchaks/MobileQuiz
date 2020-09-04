@@ -114,7 +114,7 @@ function callCheckOption1(){
     } else{
         var myName=document.getElementById("inputDefault").value
         document.getElementById('Announcement').textContent='O '+myName+'! you missed it. Please try again';
-        document.getElementById('Announcement').style.color='red';
+        document.getElementById('Announcement').style.color='#C62828';
         document.getElementById('Option1').className="form-control is-invalid btn-sm"
     }
 }
@@ -131,7 +131,7 @@ function callCheckOption2(){
     } else{
         var myName=document.getElementById("inputDefault").value
         document.getElementById('Announcement').textContent='O '+myName+'! you missed it. Please try again';
-        document.getElementById('Announcement').style.color='red';
+        document.getElementById('Announcement').style.color='#C62828';
         document.getElementById('Option2').className="form-control is-invalid btn-sm"
     }
 }
@@ -148,7 +148,7 @@ function callCheckOption3(){
     } else{
         var myName=document.getElementById("inputDefault").value
         document.getElementById('Announcement').textContent='Sorry '+myName+' .That\'s not correct';
-        document.getElementById('Announcement').style.color='red';
+        document.getElementById('Announcement').style.color='#C62828';
         document.getElementById('Option3').className="form-control is-invalid btn-sm"
     }
 }
@@ -164,7 +164,7 @@ function callCheckOption4(){
         document.getElementById('Option4').className="form-control is-valid btn-sm"
     } else{
         document.getElementById('Announcement').textContent='Sorry, that\'s not correct. Please try again';
-        document.getElementById('Announcement').style.color='red';
+        document.getElementById('Announcement').style.color='#C62828';
         document.getElementById('Option4').className="form-control is-invalid btn-sm"
     }
 }
