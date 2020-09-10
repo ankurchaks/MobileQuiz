@@ -38,19 +38,19 @@ async function GetData(Ques_No){
     document.getElementById('Option2').textContent=columns[3];
     document.getElementById('Option3').textContent=columns[4];
     document.getElementById('Option4').textContent=columns[5];
-    
+
     rightAns=columns[6];
-   
+
     if (Ques_No==0) {
         document.getElementById('BtnPrevious').style.display='none';
     } else{
         //document.getElementById('BtnPrevious').style.display='block';
     };
     if (Ques_No==myTable.length-2) {
-        alert(myTable.length);
+        //alert(myTable.length);
         document.getElementById('BtnNext').style.display='none';
         document.getElementById('BtnFinish').style.display='block';
-        
+
     } else{
         document.getElementById('BtnNext').style.display='block';
     }
@@ -106,7 +106,7 @@ function callStartQuestion(){
 document.getElementById('BtnNext').addEventListener('click',callNextQuestion);
 
 function callNextQuestion(){
-   
+
     UpdateScore();
     ResetScreen();
     Ques_No++;
@@ -146,7 +146,7 @@ function callFinish(){
     } else{
         document.getElementById('Ques').textContent='Sorry, we could not generate the final score for you.'
     }
-    
+
 
     document.getElementById('Option1').style.display='none';
     document.getElementById('Option2').style.display='none';
@@ -242,10 +242,10 @@ function UpdateScore(){
 //Check Result
  if (Result.trim()=='Correct') {
     ScoreCorrect++;
-    document.getElementById("CorrectAns").innerHTML=ScoreCorrect;   
+    document.getElementById("CorrectAns").innerHTML=ScoreCorrect;
  } else if(Result.trim()=='In-Correct') {
     ScoreIncorrect++;
-    document.getElementById("WrongAns").innerHTML=ScoreIncorrect;   
+    document.getElementById("WrongAns").innerHTML=ScoreIncorrect;
  } else{
     ScoreNotAttempted++;
     document.getElementById("NotAttempted").innerHTML=ScoreNotAttempted;
@@ -253,7 +253,3 @@ function UpdateScore(){
  //Reset Results
     Result='Not Attempted';
 }
-
-
-
-
